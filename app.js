@@ -1,9 +1,10 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
+const Pass = require(__dirname+"/Pass")
 const app = express()
 const _=require("lodash")
-mongoose.connect("mongodb://localhost:27017/todolistDB", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://admin-rohan:"+Pass+"@cluster0.qlcjp.mongodb.net/todolistDB", { useNewUrlParser: true });
 app.set('view engine', 'ejs');
 const itemsSchema = {
     name: String,
